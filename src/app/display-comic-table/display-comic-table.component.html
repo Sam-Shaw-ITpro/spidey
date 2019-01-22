@@ -1,3 +1,38 @@
-<p>
+<!-- <p>
   display-comic-table works!
-</p>
+</p> -->
+<!-- {{ allcomics | json }} -->
+
+<p>Ultimate Spiderman Comics</p>
+
+<div *ngFor="let list of allcomics">
+  <p *ngFor="let final of list.comics.items">
+    MAKE A TABLE 
+    {{ final.name }}
+    {{ final.resourceURI }}
+    <button [routerLink]="['/TOTHEMODAL', { URI: final.resourceURI } ]">SEE MORE</button>
+    NEED A MODAL BUTTON HERE THAT CALLS A SERVICE
+  </p>
+</div>
+
+<!-- <div class="card">
+      <p>
+        <br />
+        <b>{{ one.name }}</b> <br />
+        {{ one.location.display_address }}<br>
+        {{ one.display_phone }}<br>
+        rating: {{ one.rating }} stars<br>
+        <img [src]="one.image_url" width="140" height="140">
+        <br>
+        (click to select) 
+      </p>
+    </div>
+  </button>
+</p> -->
+
+<!-- comics items -->
+
+
+
+
+<!-- https://gateway.marvel.com:443/v1/public/comics/65329?apikey=6918d3b162edb8a846c8954d776e325c&ts=12121212&hash=7a29c937f783447960add3e3ac6b0d42 -->
