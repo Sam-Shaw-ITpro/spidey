@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from '../marvel.service';
 import { ActivatedRoute } from '@angular/router';
-import { OneComic } from '../comicModel'
 
 @Component({
   selector: 'app-issue-details',
@@ -11,13 +10,7 @@ import { OneComic } from '../comicModel'
 export class IssueDetailsComponent implements OnInit {
   error = '';
   onecomic: object;
-  characters: object;
-  items: object;
-  results: object;
-  data: object;
-
-  // uri = '';
-
+  
   constructor(
     private marvelservice: MarvelService,
     private activatedRoute: ActivatedRoute,

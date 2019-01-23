@@ -27,27 +27,29 @@
     padding-bottom: 3px;
 }
 
-
-
 table, th, td {
     border: 3px solid lightgray;
     padding: 6px;
     border-collapse: collapse;
     font-family: 'Open Sans', sans-serif;
-  }
+}
 
 button {
     font-family: 'Open Sans', sans-serif;
     background-color: #CD222C;
     color: white;
-
+    font-size: 20px;
+    border: black solid 3px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
-
 
 .leftside {
     display: inline-block;
     width: 49%;
     color: black;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: top;
 }
 
 .leftside p {
@@ -55,22 +57,21 @@ button {
     font-family: 'Open Sans', sans-serif;
 }
 
+.leftside h3 {
+    font-size: 150%;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .rightside {
-    vertical-align: top;
     display: inline-block;
-    min-height: 750px;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin: auto;
+    text-align: center;
     width: 49%;
-    /* position: relative; */
-    background-image: url("../assets/sm3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-    /* background-color: black; */
+}
+
+.rightside img {
+    margin: auto;
 }
 
 .footer {
@@ -92,9 +93,13 @@ button {
     color: white;
     text-decoration: none;
     padding: 4px;
+    -webkit-text-stroke-width: .25px;
+    -webkit-text-stroke-color: black;
 }
 
 .footer a {
     color: white;
     text-decoration: none;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
 }

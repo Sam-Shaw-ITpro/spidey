@@ -5,6 +5,10 @@ export interface OneComic {
             creators: object,
             id: number,
             title: string
+            thumbnail: 
+                {
+                    path: string,
+                }
         }
     }
 }
