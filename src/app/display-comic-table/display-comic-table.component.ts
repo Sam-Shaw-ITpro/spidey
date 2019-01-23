@@ -28,6 +28,7 @@ export class DisplayComicTableComponent implements OnInit {
     this.marvelservice.getAllSpidermanComicsMethod()
       .subscribe(AllComics => {
         this.allcomics = AllComics.data.results;
+        // this.allcomics = AllComics;
         console.log('All Comics ', this.allcomics);
       },
         error => {

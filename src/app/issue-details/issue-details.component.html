@@ -1,0 +1,34 @@
+<div class="header">
+  <h1>Ultimate Spiderman Comics</h1>
+</div>
+<br />
+<br />
+<div class="leftandright">
+  <div class="leftside">
+    <div *ngIf="onecomic">
+      <div>
+        <h3>
+          Comic ID: {{ onecomic.id }}
+          Title: {{ onecomic.title }}
+        </h3>
+      </div>
+      <table>
+        <th>Characters: </th>
+        <tr *ngFor="let char of onecomic.characters.items">
+          <td>{{ char.name }} </td>
+        </tr>
+      </table>
+      <table>
+        <th>Creators: </th>
+        <tr *ngFor="let creat of onecomic.creators.items">
+          <td>{{ creat.name }} </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="rightside"></div>
+</div>
+<!-- <button [routerLink]="['/', { uri: list.resourceURI } ]">DETAILS</button> -->
+<div class="footer">
+  <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>
+</div>
