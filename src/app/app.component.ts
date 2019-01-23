@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import * as moment from 'moment';
+// import { RouterModule, Routes } from '@angular/router';
+// import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +9,9 @@ import * as moment from 'moment';
 })
 export class AppComponent implements OnInit {
   title = 'spidey';
-  theYear = '';
+  // theYear = '';
 
   ngOnInit() {
-    this.theYear = moment(new Date()).format('YYYY');
+    // this.theYear = moment(new Date()).format('YYYY');
   }
 }

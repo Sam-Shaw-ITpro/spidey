@@ -1,0 +1,76 @@
+.leftandright {
+    display: inline-block;
+    width: 100%;
+}
+
+.header {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #CD222C;
+    /* background-color: #f9110f; */
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+    top: 0%;
+}
+
+.header h1 {
+    margin: 0%;
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1;
+    color: white;
+    height: 75px;
+}
+
+.leftside {
+    display: inline-block;
+    width: 49%;
+    color: black;
+}
+
+.leftside p {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.rightside {
+    vertical-align: top;
+    display: inline-block;
+    min-height: 801px;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 49%;
+    /* position: relative; */
+    background-image: url("../assets/sm3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    /* background-color: black; */
+}
+
+.footer {
+    background-color: #CD222C;
+    width: 100%;
+    height: 35px;
+    margin: 0%;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    bottom: 0%;
+    position: relative;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from '../marvel.service'
+import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-display-comic-table',
@@ -10,6 +12,7 @@ export class DisplayComicTableComponent implements OnInit {
   error = '';
   onecomic: object;
   allcomics: object;
+  theYear = '';
   
   constructor(
     private marvelservice: MarvelService,
@@ -17,6 +20,7 @@ export class DisplayComicTableComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.theYear = moment(new Date()).format('YYYY');
     this.getAllSpidermanComics()  
   }
 
