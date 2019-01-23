@@ -2,33 +2,36 @@
   <h1>Ultimate Spiderman Comics</h1>
 </div>
 <br />
-<br />
 <div class="leftandright">
   <div class="leftside">
     <div *ngIf="onecomic">
       <div>
+        <button routerLink="/comics">return to list</button>
+        <br />
+        <br />
         <h3>
-          Comic ID: {{ onecomic.id }}
+          Comic ID: {{ onecomic.id }} <br>
           Title: {{ onecomic.title }}
         </h3>
       </div>
-      <table>
-        <th>Characters: </th>
-        <tr *ngFor="let char of onecomic.characters.items">
-          <td>{{ char.name }} </td>
-        </tr>
-      </table>
-      <table>
-        <th>Creators: </th>
-        <tr *ngFor="let creat of onecomic.creators.items">
-          <td>{{ creat.name }} </td>
-        </tr>
-      </table>
+      <div>
+        <h3>Characters: </h3>
+        <p *ngFor="let charactername of onecomic.characters.items">
+          {{ charactername.name }} </p>
+        <br />
+        <h3>Creators: </h3>
+        <p *ngFor="let creatorsname of onecomic.creators.items">
+          {{ creatorsname.name }} </p>
+      </div>
     </div>
   </div>
-  <div class="rightside"></div>
+  <div class="rightside">
+    <div *ngIf="onecomic">
+      <img src="{{onecomic.thumbnail.path}}.jpg?apikey=6918d3b162edb8a846c8954d776e325c&ts=12121212&hash=7a29c937f783447960add3e3ac6b0d421"
+        alt="image" height="600">
+    </div>
+  </div>
 </div>
-<!-- <button [routerLink]="['/', { uri: list.resourceURI } ]">DETAILS</button> -->
 <div class="footer">
   <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>
 </div>
