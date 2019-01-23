@@ -2,22 +2,28 @@
   display-comic-table works!
 </p> -->
 <!-- {{ allcomics | json }} -->
+
+
 <div class="header">
   <h1>Ultimate Spiderman Comics</h1>
 </div>
+<br />
+<br />
 <div class="leftandright">
   <div class="leftside">
-    <div *ngFor="let list of allcomics">
-      <p *ngFor="let final of list.comics.items">
-        <button [routerLink]="['/TOTHEMODAL', { URI: final.resourceURI } ]">SEE MORE</button>
-        {{ final.name }}
-        <!-- {{ final.resourceURI }} -->
-        <!-- <button [routerLink]="['/TOTHEMODAL', { URI: final.resourceURI } ]">SEE MORE</button> -->
-        <!-- NEED A MODAL BUTTON HERE THAT CALLS A SERVICE -->
-      </p>
-    </div>
+    <table>
+      <tr *ngFor="let list of allcomics">
+        <td>
+          <button [routerLink]="['/details', { uri: list.resourceURI } ]">DETAILS</button>
+        </td>
+        <td>Issue: {{ list.issueNumber }} </td>
+        <td>Title: {{ list.title }}</td>
+        <!-- <td>URI: {{ list.resourceURI }}</td> -->
+      </tr>
+    </table>
   </div>
-  <div class="rightside"></div>
+  <div class="rightside">
+  </div>
 </div>
 <div class="footer">
   <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>

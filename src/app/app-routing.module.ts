@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component'
-import { DisplayComicTableComponent } from './display-comic-table/display-comic-table.component'
-
+import { DisplayComicTableComponent } from './display-comic-table/display-comic-table.component';
+import { IssueDetailsComponent } from './issue-details/issue-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/displaycomic', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'displaycomic', component: DisplayComicTableComponent },
+  { path: '', redirectTo: '/comics', pathMatch: 'full' },
+    { path: 'comics', component: DisplayComicTableComponent },
+  { path: 'details', component: IssueDetailsComponent },
+
 ];
 
 @NgModule({
