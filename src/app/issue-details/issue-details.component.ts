@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from '../marvel.service';
 import { ActivatedRoute } from '@angular/router';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-issue-details',
@@ -10,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class IssueDetailsComponent implements OnInit {
   error = '';
   onecomic: object;
+  theYear = '';
   
   constructor(
     private marvelservice: MarvelService,
@@ -17,6 +19,7 @@ export class IssueDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.theYear = moment(new Date()).format('YYYY');
     this.activatedRoute.params.subscribe(params => {
       var uri = params['uri'];
       console.log('in details ', uri)
