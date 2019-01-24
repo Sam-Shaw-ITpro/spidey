@@ -98,3 +98,66 @@ button {
     color: white;
     text-decoration: none;
 }
+
+/* ======================================== */
+.dialogleftandright {
+    display: inline-block;
+    width: 100%;
+    /* opacity: .9; */
+}
+
+/* .dialogheader {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #CD222C;
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+    top: 0%;
+    border: black solid 3px;
+}
+
+.dialogheader h1 {
+    margin: 0%;
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 1;
+    color: white;
+    height: 80px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    padding-left: 10px;
+    padding-bottom: 3px;
+} */
+
+
+.dialogleftside {
+    display: inline-block;
+    width: 49%;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: top;
+}
+
+.dialogleftside p {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.dialogleftside h3 {
+    font-size: 150%;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.dialogrightside {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    width: 49%;
+}
+
+.dialogrightside img {
+    margin: auto;
+}

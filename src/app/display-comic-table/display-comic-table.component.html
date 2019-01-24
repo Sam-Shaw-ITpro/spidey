@@ -8,7 +8,10 @@
     <table>
       <tr *ngFor="let list of allcomics">
         <td>
-          <button [routerLink]="['/details', { uri: list.resourceURI } ]">DETAILS</button>
+          <button [routerLink]="['/details', { uri: list.resourceURI } ]">DETAILS PAGE</button>
+        </td>
+        <td>
+          <button (click)="showDialog = !showDialog; getOneSpidermanComic(list.resourceURI)" class="btn">DETAILS DIALOG</button>
         </td>
         <td>Issue: {{ list.issueNumber }} </td>
         <td>Title: {{ list.title }}</td>
@@ -21,3 +24,40 @@
 <div class="footer">
   <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>
 </div>
+
+<app-issue-details-modal [(visible)]="showDialog">
+  <div class="dialogheader">
+  </div>
+  <br />
+  <div class="dialogleftandright">
+    <div class="dialogleftside">
+      <div *ngIf="onecomic">
+        <div>
+          <h3>
+            Comic ID: {{ onecomic.id }} <br>
+            Title: {{ onecomic.title }}
+          </h3>
+        </div>
+        <div>
+          <br />
+          <h3>Characters: </h3>
+          <p *ngFor="let charactername of onecomic.characters.items">
+            {{ charactername.name }} </p>
+          <br />
+          <h3>Creators: </h3>
+          <p *ngFor="let creatorsname of onecomic.creators.items">
+            {{ creatorsname.name }} </p>
+          <br />
+          <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="dialogrightside">
+      <div *ngIf="onecomic">
+        <img src="{{onecomic.thumbnail.path}}.jpg?apikey=6918d3b162edb8a846c8954d776e325c&ts=12121212&hash=7a29c937f783447960add3e3ac6b0d421"
+          alt="image" height="600">
+      </div>
+    </div>
+  </div>
+
+</app-issue-details-modal>

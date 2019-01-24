@@ -34,7 +34,6 @@ export class IssueDetailsComponent implements OnInit {
     getOneSpidermanComic(uri): void {
           this.marvelservice.getOneSpidermanComicMethod(uri)
             .subscribe(OneComic => {
-              // this.onecomic = OneComic;
               this.onecomic = OneComic.data.results[0];
               console.log('One Comic ', this.onecomic);
             },

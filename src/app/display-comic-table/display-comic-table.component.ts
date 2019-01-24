@@ -10,6 +10,7 @@ import * as moment from 'moment';
 export class DisplayComicTableComponent implements OnInit {
   error = '';
   allcomics: object;
+  onecomic: object;
   theYear = '';
 
   constructor(
@@ -32,4 +33,18 @@ export class DisplayComicTableComponent implements OnInit {
           console.log('error', this.error);
         });
   }
+
+  getOneSpidermanComic(uri): void {
+    this.marvelservice.getOneSpidermanComicMethod(uri)
+      .subscribe(OneComic => {
+        this.onecomic = OneComic.data.results[0];
+        console.log('One Comic ', this.onecomic);
+      },
+        error => {
+          this.error = error;
+          console.log('error', this.error);
+        });
+  }
+
+
 }
