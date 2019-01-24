@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-issue-details-modal',
@@ -27,7 +27,7 @@ export class IssueDetailsModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('when does this happen??')
+    // console.log('when does this happen??')
   }
 
   close() {

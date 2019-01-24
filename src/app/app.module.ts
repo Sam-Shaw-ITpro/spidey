@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { DisplayComicTableComponent } from './display-comic-table/display-comic-table.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http'
@@ -19,11 +20,12 @@ import { IssueDetailsModalComponent } from './issue-details-modal/issue-details-
     IssueDetailsModalComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule,
+    HttpClientModule
   ],
   providers: [HttpClient, MarvelService],
   bootstrap: [AppComponent]
