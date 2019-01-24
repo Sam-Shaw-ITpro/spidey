@@ -7,9 +7,9 @@
   <div class="leftside">
     <table>
       <tr *ngFor="let list of allcomics">
-        <td>
+        <!-- <td>
           <button [routerLink]="['/details', { uri: list.resourceURI } ]">DETAILS PAGE</button>
-        </td>
+        </td> -->
         <td>
           <button (click)="showDialog = !showDialog; getOneSpidermanComic(list.resourceURI)" class="btn">DETAILS DIALOG</button>
         </td>
@@ -25,9 +25,8 @@
   <p>Data provided by Marvel. © {{ theYear }} Marvel <a href="http://marvel.com">www.marvel.com</a></p>
 </div>
 
+
 <app-issue-details-modal [(visible)]="showDialog">
-  <div class="dialogheader">
-  </div>
   <br />
   <div class="dialogleftandright">
     <div class="dialogleftside">
