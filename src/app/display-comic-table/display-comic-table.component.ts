@@ -15,7 +15,6 @@ export class DisplayComicTableComponent implements OnInit {
   allcomics: object;
   onecomic: object;
   theYear = '';
-  @Input() visible: boolean;
 
   constructor(
     private marvelservice: MarvelService,
@@ -30,11 +29,11 @@ export class DisplayComicTableComponent implements OnInit {
     this.marvelservice.getAllSpidermanComicsMethod()
       .subscribe(AllComics => {
         this.allcomics = AllComics.data.results;
-        // console.log('All Comics ', this.allcomics);
+        console.log('All Comics ', this.allcomics);
       },
         error => {
           this.error = error;
-          // console.log('error', this.error);
+          console.log('error', this.error);
         });
   }
 
@@ -42,7 +41,7 @@ export class DisplayComicTableComponent implements OnInit {
     this.marvelservice.getOneSpidermanComicMethod(uri)
       .subscribe(OneComic => {
         this.onecomic = OneComic.data.results[0];
-        // console.log('One Comic ', this.onecomic);
+        console.log('One Comic ', this.onecomic);
       },
         error => {
           this.error = error;

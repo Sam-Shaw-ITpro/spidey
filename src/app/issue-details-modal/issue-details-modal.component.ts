@@ -27,7 +27,7 @@ export class IssueDetailsModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.log('when does this happen??')
+
   }
 
   close() {
