@@ -32,7 +32,8 @@ export class MarvelService {
   }
 
   getOneSpidermanComicMethod(uri): Observable<OneComic> {
-    return this.http.get<OneComic>(`${uri}?apikey=6918d3b162edb8a846c8954d776e325c&ts=12121212&hash=7a29c937f783447960add3e3ac6b0d42`, httpOptions);
+    return this.http.get<OneComic>(`https://cors-anywhere.herokuapp.com/${uri}?apikey=6918d3b162edb8a846c8954d776e325c&ts=12121212&hash=7a29c937f783447960add3e3ac6b0d42`, httpOptions);
   }
   // https://cors-anywhere.herokuapp.com/
+  // http://gateway.marvel.com/v1/public/comics/65329
 }
