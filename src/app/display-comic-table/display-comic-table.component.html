@@ -7,11 +7,8 @@
   <div class="leftside">
     <table>
       <tr *ngFor="let list of allcomics">
-        <!-- <td>
-          <button [routerLink]="['/details', { uri: list.resourceURI } ]">DETAILS PAGE</button>
-        </td> -->
         <td>
-          <button (click)="showDialog = !showDialog; getOneSpidermanComic(list.resourceURI)" class="btn">DETAILS DIALOG</button>
+          <button (click)="showDialog = !showDialog; getOneSpidermanComic(list.resourceURI)" class="btn">DETAILS</button>
         </td>
         <td>Issue: {{ list.issueNumber }} </td>
         <td>Title: {{ list.title }}</td>
